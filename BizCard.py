@@ -1,15 +1,5 @@
 
-# Run the below command if you don't already have Pandas
-!pip install pandas
-!pip install snscrape
-# Imports
-
 import pandas as pd
-
-!pip install easyocr
-
-!pip install pymongo
-import pymongo as pym 
 
 
 import easyocr as ocr  #OCR
