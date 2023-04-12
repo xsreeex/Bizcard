@@ -4,7 +4,7 @@ import pandas as pd
 
 import easyocr as ocr  #OCR
 import streamlit as st  #Web App
-import pymongo as pym 
+
 import pandas as pd
 from PIL import Image #Image Processing
 import numpy as np #Image Processing 
