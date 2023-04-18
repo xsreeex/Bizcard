@@ -4,3 +4,4 @@ numpy==1.23.3
 pandas==1.5.0
 easyocr==1.6.2
 mysql-connector-python==8.0.32
+PyMongo==4.3.3
