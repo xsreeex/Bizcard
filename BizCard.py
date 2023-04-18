@@ -1,6 +1,6 @@
 
 import pandas as pd
-
+import pymongo as pym 
 
 import easyocr as ocr  #OCR
 import streamlit as st  #Web App
@@ -19,7 +19,7 @@ st.markdown("")
 
 #image uploader
 image = st.file_uploader(label = "Upload your image here",type=['png','jpg','jpeg'])
-
+submitted1 = input_form.form_submit_button("Save to Database")
 
 
 def load_model(): 
