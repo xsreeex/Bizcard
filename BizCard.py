@@ -19,7 +19,7 @@ st.markdown("")
 
 #image uploader
 image = st.file_uploader(label = "Upload your image here",type=['png','jpg','jpeg'])
-submitted1 = st.button("Save to Database")
+
 
 
 def load_model(): 
@@ -27,7 +27,7 @@ def load_model():
     return reader 
 
 reader = load_model() #load model
-input_form = st.form("input_form")
+
 
 if image is not None:
 
@@ -51,10 +51,13 @@ if image is not None:
 
 else:
     st.write("Upload an Image")
+submitted1 = st.button("Save to Database")
 if submitted1 is True:
     # Making a Connection to MongoClient
         client = pym.MongoClient("mongodb+srv://Sree:Sree123@cluster0.j4yl447.mongodb.net/?retryWrites=true&w=majority")
 
      # CREATING A DATABASE:
         db = client["BizCard"]
-
+        mycol=db["BIZ-CARD_DATA"]
+        x = mycol.insert_one(result_text)
+        
