@@ -59,5 +59,5 @@ if submitted1 is True:
      # CREATING A DATABASE:
         db = client["BizCard"]
         mycol=db["BIZ-CARD_DATA"]
-        x = mycol.insert_many(result_text)
+        db.mycol.insert(result_text)
         
