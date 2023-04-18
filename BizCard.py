@@ -56,10 +56,10 @@ if submitted1 is True:
     # Making a Connection to MongoClient
         client = pym.MongoClient("mongodb+srv://Sree:Sree123@cluster0.j4yl447.mongodb.net/?retryWrites=true&w=majority")
 
-     # CREATING A DATABASE:
-        db = client["BizCard"]
-        db.create_collection["mycol"]
-        db.mycol.insert(result_text)
-        collection = db.mycol
-        collection.insert_one(result_text)     # Insert one item to create the collection
+        db = client['trial']
+        test = db['Test']
+    # Insert data into MongoDB
+        result = test.insert_many(data.to_dict('result_text'))
+    # Display result
+        st.write(f'{len(result.inserted_ids)} documents uploaded to MongoDB')
 
