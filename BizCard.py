@@ -1,7 +1,7 @@
 
 import pandas as pd
 import pymongo as pym 
-
+from pymongo import MongoClient
 import easyocr as ocr  #OCR
 import streamlit as st  #Web App
 
@@ -58,6 +58,8 @@ if submitted1 is True:
 
      # CREATING A DATABASE:
         db = client["BizCard"]
-        mycol=db["BIZ-CARD_DATA"]
+        db.create_collection["mycol"]
         db.mycol.insert(result_text)
-        
+        collection = db.mycol
+        collection.insert_one(result_text)     # Insert one item to create the collection
+
