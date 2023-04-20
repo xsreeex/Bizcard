@@ -61,6 +61,5 @@ if submitted1 is True:
         test = db['Test']
     # Insert data into MongoDB
         result = test.insert('result_text')
-    # Display result
-        st.write(f'{len(result.inserted_ids)} documents uploaded to MongoDB')
+
 
