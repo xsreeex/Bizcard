@@ -1,6 +1,3 @@
-!pip install streamlit
-!pip install easyocr
-
 import easyocr
 
 import streamlit as st
@@ -8,7 +5,7 @@ import sqlite3
 import easyocr
 from PIL import Image
 reader = easyocr.Reader(['en'], gpu = False)
-
+import sqlite3
 import PIL
 from PIL import ImageDraw
 
@@ -81,9 +78,6 @@ for i in bounds4:
 for i in bounds5:
     print(i[1])
 
-!pip install pandas
-
-import pandas as pd
 pd.DataFrame(bounds, columns = ['coordinates', 'words', 'confidence interval'])
 
 pd.DataFrame(bounds2, columns = ['coordinates', 'words', 'confidence interval'])
@@ -93,8 +87,6 @@ pd.DataFrame(bounds3, columns = ['coordinates', 'words', 'confidence interval'])
 pd.DataFrame(bounds4, columns = ['coordinates', 'words', 'confidence interval'])
 
 pd.DataFrame(bounds5, columns = ['coordinates', 'words', 'confidence interval'])
-
-import sqlite3
 
 conn = sqlite3.connect('bussiness_card.db')
 
