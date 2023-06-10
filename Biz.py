@@ -1,3 +1,28 @@
+!pip install streamlit
+!pip install easyocr
+
+import easyocr
+
+reader = easyocr.Reader(['en'], gpu = False)
+
+import PIL
+from PIL import ImageDraw
+
+im = PIL.Image.open('/content/drive/MyDrive/1.png')
+im
+
+im2 = PIL.Image.open('/content/drive/MyDrive/2.png')
+im2
+
+im3 = PIL.Image.open('/content/drive/MyDrive/3.png')
+im3
+
+im4 = PIL.Image.open('/content/drive/MyDrive/4.png')
+im4
+
+im5 = PIL.Image.open('/content/drive/MyDrive/5.png')
+im5
+
 bounds = reader.readtext('drive/MyDrive/1.png')
 bounds
 
