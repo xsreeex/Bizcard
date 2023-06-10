@@ -53,13 +53,8 @@ else:
     st.write("Upload an Image")
 submitted1 = st.button("Save to Database")
 if submitted1 is True:
-    # Making a Connection to MongoClient
-        client = pym.MongoClient("mongodb+srv://Sree:Sree123@cluster0.j4yl447.mongodb.net/?retryWrites=true&w=majority")
+
+    
+   
         
-
-        db = client['trial']
-        test = db['Test']
-    # Insert data into MongoDB
-        result = test.insert('result_text')
-
 
